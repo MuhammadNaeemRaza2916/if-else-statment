@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else statment</title>
+</head>
+<body>
+    
+    <h2>Please enter your Percentage</h2>
+
+    <form onsubmit="conditionCheck(); return false">
+        <input type="number" id="num1">
+        <br>
+        <button type="submit">Submit</button>        
+
+    </form>
+    
+    <h2 id="result"></h2>
+
+    <script>
+        function conditionCheck() {
+            
+            let percent = document.querySelector("#num1").value;
+            
+            percent = Number(percent);
+
+            console.log(percent);
+            
+            if (percent >= 80){
+                console.log("Grade: A1");
+                document.querySelector("#result").innerHTML = "Grade: A1";
+            }
+            else if (percent >= 70){
+                console.log("Grade: A");
+                document.querySelector("#result").innerHTML = "Grade: A";
+            }
+            else if (percent >= 60){
+                console.log("Grade: B");
+                document.querySelector("#result").innerHTML = "Grade: B";
+            }
+            else if (percent >= 50){
+                console.log("Grade: C");
+                document.querySelector("#result").innerHTML = "Grade: C";
+            }
+            else if (percent >= 40){
+                console.log("Grade: D");
+                document.querySelector("#result").innerHTML = "Grade: D";
+            }
+            else{
+                console.log("Fail");
+                document.querySelector("#result").innerHTML = "Fail";
+            }
+
+        }
+    </script>
+
+</body>
+</html>
